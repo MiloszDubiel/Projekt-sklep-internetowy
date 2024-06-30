@@ -1,0 +1,272 @@
+/*Main znacznik*/
+.main{
+    transform: translateY(70px);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    background-color: #dddddd;
+}
+/*Menu kategorii*/
+.hiddenMenu{
+    display: none;
+}
+.categoriesMenu{
+    width: 70%;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 20px
+}
+.categoriesMenu > h2{
+    font-weight: bolder;
+    width: 100px;
+    background-color: #ffffff;
+}
+.table1{
+    height: 90%;
+    width: 90%;
+    table-layout: fixed;
+    text-align: center;
+    border-spacing: 20px;
+}
+.table1 td{
+    margin: 20px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    transition: 0.5s;
+    cursor: pointer;
+    background-color: #ffffff;
+}
+.table1 td:hover{
+    transform: scale(1.02);
+}
+.categoriesMenuTdTable{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+.categoriesIcon{
+    height: 40px;
+}
+.categoriesMenu a{
+    text-decoration: none;
+    color: black;
+}
+
+/*Divy dla kategori */
+.miesoDiv, .wedlinyDiv, .nabialDiv, .warzywniakDiv, .rybyDiv, .pieczywoDiv, .slodyczeDiv, .alkoholeDiv{
+    width: 70%;
+    border: 1px solid #dddddd;
+    height: 800px;
+    padding: 20px;
+    margin-bottom: 20px;
+    overflow-y: scroll;
+    background-color: #ffffff;
+}
+.categories{
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+/*Kontener divów z kategoriami*/
+.container{
+   display: grid; 
+   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+   gap: 20px;
+   height: 100%;
+   margin: 10px;
+   justify-items: center;
+   align-items: center;
+}
+.productsDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid #dddddd;
+    height: 350px;
+    width: 100%;
+}
+.productName{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+.addToBasket img{
+    height: 50px;
+}
+/*Zawarotśc kafelka z produktem*/
+.productInfo{
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.productInfo > img{
+    height: 90px;
+    margin-bottom: 20px;
+}
+.addToBasket{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ilosc{
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px;
+}
+.ilosc button{
+    width: 18px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+    border: 1px solid green;
+    color: white;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: 300ms;
+}
+.add{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    width: 60px;
+    background-color: green;
+    color: white;
+    font-size: 15px;
+    border: 1px solid green;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 300ms;
+}
+.add > img{
+    height: 30px;
+}
+.ilosc button:hover, .add:hover{
+    transform: scale(1.02);
+}
+/*Responsywność*/
+/*Dla conatiner i maina */
+@media screen and (max-width: 1900px) {
+    .container{
+        display: grid; 
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+     }
+}
+@media screen and (max-width: 1410px) {
+    .container{
+        display: grid; 
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+     }
+}
+@media screen and (max-width: 1310px){
+    .main{
+        display: block;
+    }
+    .miesoDiv, .wedlinyDiv, .nabialDiv, .warzywniakDiv, .rybyDiv, .pieczywoDiv, .slodyczeDiv, .alkoholeDiv{
+        width: 100%;
+    }
+    .categoriesMenu{
+        width: 100%;
+    }
+    .container{
+        display: grid; 
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+     }
+}
+@media screen and (max-width: 980px) {
+    .container{
+        display: grid; 
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media screen and (max-width: 740px) {
+    .container{
+        display: grid; 
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+    .table1{
+        display: none;
+    }
+    .hiddenMenu{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .hiddenMenu > button{
+        height: 50px;
+        width: 50px;
+        font-size: 15px;
+        font-weight: bold;
+        background-color: green;
+        color: white;
+        border: 1px solid green;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .table2{
+        position: absolute;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 70%;
+        padding: 20px;
+        border: 1px solid #dddddd;
+        top: 165px;
+        opacity: 0;
+        border-radius: 5px;
+    }
+    .showHiddenMenu{
+        opacity: 1 !important;
+    }
+    tbody{
+        width: 100%;
+    }
+    .table2 tr{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #dddddd;
+        width: 100%;
+        margin: 5px;
+    }
+    .table2 tr td{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .container{
+        display: grid; 
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+    }
+}
+@media screen and (min-width: 1920px){
+    .miesoDiv, .wedlinyDiv, .nabialDiv, .warzywniakDiv, .rybyDiv, .pieczywoDiv, .slodyczeDiv, .alkoholeDiv{
+        width: 1339.09px;
+    }
+    .categoriesMenu {
+        width: 1339.09px;
+    }
+}

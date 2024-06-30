@@ -1,0 +1,29 @@
+.prodcuts{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100px;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #dddddd;
+    margin-bottom: 5px;
+}
+.prodcuts div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100px;
+    justify-content: center;
+}
+.picture{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.picture img {
+    height: 40px;
+}
+.header{
+    font-weight: bold;
+}
+

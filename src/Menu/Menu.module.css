@@ -1,0 +1,336 @@
+/*Menu górne*/
+nav{
+    display: flex;
+    flex-direction: row;
+    width: calc(100%);
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid #dddddd;
+    padding-left: 10px;
+    height: 70px;
+    align-items: center;
+    position: fixed;
+    z-index: 11111;
+}
+.navDiv{
+    width: 75%
+}
+.navDiv > ol{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.navDiv > ol > li{
+    margin-left: 40px;
+    transition-duration: 1s;
+}
+.navDiv > ol > li {
+    display: inline-block;
+}
+.navDiv > ol > li:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+.navDiv > ol > li::after{
+    content: '';
+    width: 0px;
+    height: 1px;
+    display: block;
+    background: black;
+    transition: 300ms;
+}
+.navDiv > ol > li:hover::after{
+    width: 100%;
+}
+.navDivBasket{
+    width: 25%;
+    margin-right: 5px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    cursor: pointer;
+}
+.navDivBasket > div.buttonBasket{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+    height: 40px;
+    width: 110px;
+    border-radius: 5px;
+    color: white;
+    transition-duration: 300ms;
+}
+.navDivBasket > div.buttonBasket:hover, .menuNav > div:hover{
+    background-color: rgb(1, 113, 1);
+    transform: scale(1.05);
+}
+.basketIcon{
+    height: 30px;
+}
+/*Koszyk*/
+.basketMenu{
+    position: fixed;
+    right: 0;
+    top: 70px;
+    margin-top: 2px;
+    border: 1px solid #dddddd;
+    width: 500px;
+    height: 0%;
+    opacity: 0;
+    border-radius: 5px;
+    background-color: white;
+    transition: 0.5s;
+    cursor: default;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    padding-left: 20px;
+}
+.basketMenuShow{
+    height: calc(100% - 75px) !important;
+    opacity: 1 !important;
+}   
+.basketMenuClose{
+    height: 0px !important;
+    opacity: 0 !important;
+}
+.basketHeader{
+    height: 10%;
+    padding: 20px;
+}
+.basketContent{
+    height: 70%;
+    width: 100%;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.basketButtons{
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+    height: 20%;
+    padding: 20px;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    z-index: 1111;
+}
+.basketButtons > input[type="button"]{
+    height: 40px;
+    width: 200px;
+    border-radius: 5px;
+    border: none;
+    background-color: green;
+    color: white;
+    transition-duration: 300ms;
+    cursor: pointer;
+}
+.basketButtons > input[type="button"]:hover{
+    background-color: rgb(1, 113, 1);
+    transform: scale(1.05);
+}
+.BasketSum{
+    position: absolute;
+    bottom: 120px;
+}
+.summary{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 11111;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+.summaryDetails{
+    height: 85%;
+    width: 500px;
+    background-color: white;
+    border-radius: 5px;
+    overflow-y: scroll;
+}
+.summaryDetailsButton{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+.summaryDetailsButton button{
+    height: 30px;
+    width: 30px;
+    margin: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: red;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    transition: 300ms;
+    cursor: pointer;
+    position: fixed;
+}
+.summaryDetailsButton button:hover{
+    background-color:  rgb(192, 0, 0);
+}
+.summaryDetailsh2{
+    margin-top: 30px;
+    width: 100%;
+    text-align: center;
+}
+.clientData{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    flex-direction: column;
+}
+.clientDataDivs{
+    padding: 10px 20px;
+    width: 100%;  
+}
+.submitDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.submitDiv > input{
+    width: 150px;
+    height: 40px;
+    font-size: 17px;
+    background-color: green;
+    border-radius: 5px;
+    border: 1px solid green;
+    color: white;
+    font-weight: bold;
+    transition: 300ms;
+    cursor: pointer;
+}
+.submitDiv > input:hover{
+    background-color: rgb(0, 151, 0);
+    border: 1px solid rgb(0, 151, 0);
+}
+.clientDataDivs  input[type=text],.clientDataDivs  input[type=date], .clientDataDivs  input[type=email], .clientDataDivs  input[type=password], .clientDataDivs  input[type=tel]{
+    border: 1px solid #bbbbbb;
+    border-radius: 5px;
+    height: 40px;
+    width: 100%;
+}
+
+
+/*Profil klienta*/
+.clientDataResponse{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 11111;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+.clientDataResponseDetails{
+    height: 85%;
+    width: 700px;
+    background-color: white;
+    border-radius: 5px;
+    overflow-y: scroll;
+}
+.clientDataResponseButton{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+.clientDataResponseButton button{
+    height: 30px;
+    width: 30px;
+    margin: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: red;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    transition: 300ms;
+    cursor: pointer;
+    position: fixed;
+}
+.clientDataResponseButton button:hover{
+    background-color:  rgb(192, 0, 0);
+}
+/*MsgBox*/
+.info{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1111111111;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+.msgbox{
+    height: 200px;
+    width: 400px;
+    background-color: white;
+    border-radius: 5px;
+    overflow-y: scroll;
+}
+.msgButton{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+.msgButton button{
+    height: 30px;
+    width: 30px;
+    margin: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: red;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    transition: 300ms;
+    cursor: pointer;
+    position: fixed;
+}
+.msgboxInfo{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100%;
+   font-weight: bold;
+   font-size: 20px;
+   text-align: center;
+}
+
+
+
+/*Responywnosc dla koszyka*/
+@media screen and (max-width: 500px) {
+    .basketMenu{
+        width: 100%;
+        height: 0px;
+      
+    }
+    .basketMenuShow{
+        height: calc(100% - 75px) !important;
+        opacity: 1 !important;
+    }   
+    .basketMenuClose{
+        height: 0px !important;
+        opacity: 0 !important;
+    }
+}
