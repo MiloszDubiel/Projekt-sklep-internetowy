@@ -90,7 +90,7 @@ class Menu extends React.Component {
                 </div>
                 <div className={styles.clientDataDivs}>
                   <input type="date" id="date" name="date" placeholder="Data zakupów - niewymagany"/>
-                  <p style={{ fontSize: '15px', fontWeight: 'bold' }}>Data jest wymagana tylko wtedy, gdy chcesz wyswietlic historie z konkretnego dnia </p>
+                  <p style={{ fontSize: '15px', fontWeight: 'bold' }}>Data jest wymagana tylko wtedy, gdy chcesz wyświetlic historie z konkretnego dnia </p>
                 </div>
                 <div className={styles.clientDataDivs}>
                   <p style={{ fontSize: '15px', fontWeight: 'bold' }}>W innym przypadku podaj tylko adres E-mail, aby wysietlić historie zakupów </p>
@@ -174,7 +174,7 @@ class Menu extends React.Component {
                   else{
                     this.props.sendData();
                     document.querySelector(`.${styles.info}`).style.display = 'flex';
-                    document.querySelector(`#msgBoxInfo`).innerHTML = '<p> Twoje zamowienie zostało złożon e </p>'
+                    document.querySelector(`#msgBoxInfo`).innerHTML = '<p> Twoje zamowienie zostało złożone </p>'
                     document.querySelector(`.${styles.info}`).classList.add('added')
                   }
                   }} 
